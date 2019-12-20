@@ -120,16 +120,16 @@ function cleanBody(message){
 	return message.replace(/\+/g, ' ');
 }
 function status(reqData, callback){
-	//console.log('statusCallback');
-	//console.log(reqData);
-	var eventType = reqData['EventType'];
+	console.log('statusCallback');
+	console.log(reqData);
+	/*var eventType = reqData['EventType'];
 	if('UNDELIVERED' === eventType){
 		var query = "UPDATE dronateam SET is_block = 1 WHERE mobile = '"+reqData.To+"'";
 		executeQuery(query, (status, resultData)=>{
 			console.log('Updated');
 			callback();
 		});
-	}
+	}*/
 }
 function findBodyJson(reqData){
 	var pos = reqData.Body.indexOf(':');
